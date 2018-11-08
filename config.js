@@ -24,11 +24,11 @@ module.exports = {
     },
     ajax: {
         client: {
-            baseURL: `http://${getIp()}:8083`,
+            baseURL: `http://${getIp()}:3007`,
         },
         // 开发环境后端预请求地址前面要加本地的域名否则默认是 127.0.0.1:80
         server: {
-            baseURL: `http://${getIp()}:8083`,
+            baseURL: `http://${getIp()}:3007`,
         }
     },
     server: { // 跨域处理
