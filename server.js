@@ -125,7 +125,7 @@ app.get('*', isProd ? render : (req, res) => {
 const port = config.server.port || process.env.PORT
 const host = config.server.host
 
-if (isProd) {
+if (isProd) { 
     app.listen(port, () => {
         console.log(`Vue ssr server started at ${port}`)
     })
