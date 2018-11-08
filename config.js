@@ -32,6 +32,7 @@ module.exports = {
         }
     },
     server: { // 跨域处理
+        host_aliy: '39.104.131.23',
         host: getIp(),
         port: 3007,
         proxy: {

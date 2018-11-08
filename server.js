@@ -123,7 +123,7 @@ app.get('*', isProd ? render : (req, res) => {
 })
 
 const port = process.env.PORT || config.server.port
-const host = config.server.host
+const host = isProd ? config.server.host_aliy : config.server.host
 app.listen(port, host, () => {
     console.log(`Vue ssr server started at ${host}:${port}`)
 })
