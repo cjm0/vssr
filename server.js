@@ -122,8 +122,16 @@ app.get('*', isProd ? render : (req, res) => {
     readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || config.server.port
-const host = isProd ? config.server.host_aliy : config.server.host
-app.listen(port, host, () => {
-    console.log(`Vue ssr server started at ${host}:${port}`)
-})
+const port = config.server.port || process.env.PORT
+const host = config.server.host
+
+if (isProd) {
+    app.listen(port, host, () => {
+        console.log(`Vue ssr server started at ${host}:${port}`)
+    })
+} else {
+    app.listen(port, () => {
+        console.log(`Vue ssr server started at ${port}`)
+    })
+}
+
