@@ -126,12 +126,12 @@ const port = config.server.port || process.env.PORT
 const host = config.server.host
 
 if (isProd) {
-    app.listen(port, host, () => {
-        console.log(`Vue ssr server started at ${host}:${port}`)
-    })
-} else {
     app.listen(port, () => {
         console.log(`Vue ssr server started at ${port}`)
+    })
+} else {
+    app.listen(port, host, () => {
+        console.log(`Vue ssr server started at ${host}:${port}`)
     })
 }
 
