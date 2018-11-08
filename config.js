@@ -33,7 +33,7 @@ module.exports = {
     },
     server: { // 跨域处理
         host: getIp(),
-        port: 8083,
+        port: 3007,
         proxy: {
             ['/cc']: {
                 target: 'http://tcc.taobao.com/', 
